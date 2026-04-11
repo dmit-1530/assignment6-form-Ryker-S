@@ -1,7 +1,7 @@
 :root {
     --orange: #CB4E0B;
     --orange-hover: #EA580C;
-    --box-shadow: 2px 2px 8px #D6E2EF;
+    --box-shadow: 0.125rem 0.125rem 0.5rem #D6E2EF;
     --border-bottom:0.1875rem solid #CB4E0B;
     --border-left: 0.3125rem solid #CB4E0B;
     --margin-bottom: 2rem;
@@ -128,5 +128,29 @@ input[type="submit"]:hover {
         flex-basis: calc((700px - 100%) * 999);
         min-inline-size: min(100%, 18.75rem);
         max-inline-size: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header {
+        flex: 0 0 40%;
+    }
+
+    form {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: 60%;
+    }
+}
+
+@media (min-width: 1660px) {
+    .container {
+        padding: 0;
+        max-width: 1560px;
     }
 }
