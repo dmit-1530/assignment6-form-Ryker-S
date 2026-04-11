@@ -1,3 +1,14 @@
+:root {
+    --orange: #CB4E0B;
+    --orange-hover: #EA580C;
+    --box-shadow: 2px 2px 8px #D6E2EF;
+    --border-bottom:0.1875rem solid #CB4E0B;
+    --border-left: 0.3125rem solid #CB4E0B;
+    --margin-bottom: 2rem;
+    --btn-border: 1px solid #C1C4C8;
+    --btn-border-radius: 0.5rem;
+}
+
 body {
     background-color: #F2F6FA;
     font-family: "Noto Sans Bhaiksuki", sans-serif;
@@ -10,16 +21,16 @@ body {
 
 h2 {
     font-size: 1.75rem;
-    border-left: 0.3125rem solid #CB4E0B;
+    border-left: var(--border-left);
     padding-left: 0.25rem;
-    border-bottom: 0.1875rem solid #CB4E0B;
+    border-bottom: var(--border-bottom);
     max-width: max-content;
     margin-bottom: 1.5rem;
 }
 
 p {
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 span {
@@ -28,7 +39,7 @@ span {
 
 legend {
     padding: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--btn-border-radius);
 }
 
 form {
@@ -46,17 +57,18 @@ form label:not(input[type="radio"] + label, input[type="checkbox"] + label) {
 form input:not([type="radio"], [type="checkbox"], [type="submit"]),
 select,
 textarea {
-    border: 1px solid #C1C4C8;
-    border-radius: 0.5rem;
+    border: var(--btn-border);
+    border-radius: var(--btn-border-radius);
     height: 3.25rem;
     padding: 0.75rem 1rem;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: var(--margin-bottom);
 }
 
 fieldset label:has(input[type="radio"]:checked) {
-    background-color: #CB4E0B;
+    background-color: var(--orange);
     color: #FFF;
+    accent-color: var(--orange);
 }
 
 textarea {
@@ -67,30 +79,30 @@ textarea {
 fieldset {
     border: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: var(--margin-bottom);
 }
 
 fieldset div {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: var(--margin-bottom);
 }
 
 fieldset label {
     padding: 0.75rem 1rem;
-    border: 1px solid #C1C4C8;
-    border-radius: 0.5rem;
+    border: var(--btn-border);
+    border-radius: var(--btn-border-radius);
     cursor: pointer;
     flex-grow: 1;
     flex-basis: calc((37rem - 100%) * 999);
-    min-inline-size: min(100%, 10rem);
+    min-inline-size: min(100%, max-content);
     max-inline-size: 100%;
     text-align: center;
     white-space: nowrap;
 }
 
 input[type="submit"] {
-    background-color: #CB4E0B;
+    background-color: var(--orange);
     border: none;
     border-radius: 1rem;
     color: white;
@@ -101,6 +113,20 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #EA580C;
-    box-shadow: 0px 2px 2px #D6E2EF;
+    background-color: var(--orange-hover);
+    box-shadow: var(--box-shadow);
+}
+
+.inner-header-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    div,
+    img {
+        flex-grow: 1;
+        flex-basis: calc((700px - 100%) * 999);
+        min-inline-size: min(100%, 18.75rem);
+        max-inline-size: 100%;
+    }
 }
