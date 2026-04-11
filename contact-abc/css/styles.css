@@ -2,7 +2,7 @@
     --orange: #CB4E0B;
     --orange-hover: #EA580C;
     --box-shadow: 0.125rem 0.125rem 0.5rem #D6E2EF;
-    --border-bottom:0.1875rem solid #CB4E0B;
+    --border-bottom: 0.1875rem solid #CB4E0B;
     --border-left: 0.3125rem solid #CB4E0B;
     --margin-bottom: 2rem;
     --btn-border: 1px solid #C1C4C8;
@@ -79,13 +79,13 @@ textarea {
 fieldset {
     border: none;
     padding: 0;
-    margin-bottom: var(--margin-bottom);
+    margin-bottom: 1.5rem;
 }
 
 fieldset div {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--margin-bottom);
+    gap: 1rem;
 }
 
 fieldset label {
@@ -138,18 +138,19 @@ input[type="submit"]:hover {
     }
 
     header {
-        flex: 0 0 40%;
+        flex: 0 0 31.25rem;
     }
 
     form {
         flex-basis: 0;
         flex-grow: 999;
-        min-inline-size: 60%;
+        min-inline-size: 37.25rem;
     }
 }
 
 @media (min-width: 1660px) {
     .container {
+        justify-content: center;
         padding: 0;
         max-width: 1560px;
     }
